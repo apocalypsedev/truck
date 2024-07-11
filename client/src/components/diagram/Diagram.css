@@ -1,0 +1,8 @@
+.diagram{
+    width: 100%;
+    height: 100vh;
+    background: url("../../assets/diagram__bg.jpeg" ) no-repeat center/cover;
+    background-blend-mode: color;
+    background-color: #000000aa;
+    border-top: 2px solid #ff3;
+}

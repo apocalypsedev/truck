@@ -1,0 +1,6 @@
+export { default as Main } from "./main/Main"
+export { default as Diagram } from "./diagram/Diagram"
+export { default as Stats } from "./stats/Stats"
+export { default as Partner } from "./partner/Partner"
+export { default as Footer } from "./footer/Footer"
+export { default as Navbar } from "./navbar/Navbar"

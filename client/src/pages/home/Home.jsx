@@ -1,13 +1,9 @@
 import React from 'react'
-import { Diagram, Navbar } from '../../components/components'
-import LoginUser from '../../components/footer/Footer'
-
+import {Navbar } from '../../components/components'
 function Home() {
   return (
     <div className='home'>
         <Navbar/>
-        <Diagram/>
-        <LoginUser/>
     </div>
   )
 }

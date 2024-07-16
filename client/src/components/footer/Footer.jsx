@@ -45,6 +45,10 @@ const LoginUser = () => {
         <button type="submit">Login</button>
       </form>
       {message && <p>{message}</p>}
+      <h1>
+        If you don't have
+        <a className='text-red-400' href="/register"> Account!</a>
+      </h1>
     </div>
   );
 };

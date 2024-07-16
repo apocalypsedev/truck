@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
+import { Diagram } from '../components';
 
 const Navbar = () => {
   const { t, i18n } = useTranslation();
@@ -35,11 +36,14 @@ const Navbar = () => {
                 <option value="uz">
                 O'zbekcha
                 </option>
-              </select><button
-            className="text-white border-[2px] border-[aqua] p-2 text-sm rounded-md cursor-pointer hover:bg-[aqua] hover:text-black  font-mono font-semibold"
-          >
-          {t('navbar.btn')}
-          </button>
+              </select>
+              <a href="/login">
+                <button
+                  className="text-white border-[2px] border-[aqua] p-2 text-sm rounded-md cursor-pointer hover:bg-[aqua] hover:text-black  font-mono font-semibold"
+                  >
+                    {t('navbar.btn')}
+                </button>
+              </a>
         </div>
       </div>
     </nav>

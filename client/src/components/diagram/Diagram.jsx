@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import LoginUser from '../footer/Footer';
 
 const RegisterUser = () => {
   const [name, setUsername] = useState('');
@@ -62,8 +61,10 @@ const RegisterUser = () => {
         <button type="submit">Register</button>
       </form>
       {message && <p>{message}</p>}
-
-      <a href={<LoginUser/>}>Login</a>
+      <h1>
+        If you have
+        <a className='text-red-400' href="/login"> Account!</a>
+      </h1>
     </div>
   );
 };

@@ -1,5 +1,4 @@
 import React from 'react'
-import "./Partner.css"
 import { cards } from '../../constants/data'
 function Partner() {
   return (

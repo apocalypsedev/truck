@@ -1,65 +1,62 @@
-import React from 'react'
-import { Swiper, SwiperSlide } from 'swiper/react';
+// import React from 'react';
+// import { Swiper, SwiperSlide } from 'swiper/react';
+// import { useTranslation } from 'react-i18next';
 
-// Import Swiper styles
-import 'swiper/css';
-import 'swiper/css/pagination';
-import 'swiper/css/navigation';
+// // Import Swiper styles
+// import 'swiper/css';
+// import 'swiper/css/pagination';
+// import 'swiper/css/navigation';
 
+// // Import Swiper core and required modules
+// import SwiperCore, { Autoplay, Pagination, Navigation } from 'swiper';
+// import 'swiper/swiper-bundle.css'; // Import Swiper bundle CSS
 
-// import required modules
-import { Autoplay, Pagination, Navigation } from 'swiper/modules';
+// // Initialize Swiper core components
+// SwiperCore.use([Autoplay, Pagination, Navigation]);
 
-function MySwiper() {
-  return (
-    <div>
-    <Swiper
-      id='swiper'
-      spaceBetween={30}
-      centeredSlides={true}
-      autoplay={{
-        delay: 5000,
-        disableOnInteraction: false,
-      }}
-      pagination={{
-        clickable: true,
-      }}
-      navigation={true}
-      modules={[Autoplay, Pagination, Navigation]}
-      className="mySwiper"
+// // Import your images (assuming Img1 is correctly imported)
+// import { Img1 } from '../../images/images';
 
-    >
-      <SwiperSlide className='swiper1'>
-        <div>
-          <h3>
-          Xush kelibsiz! <br />
-          Yuk olishga yoki topishga <br />
-          Qiynalyapsizmi 
-        </h3>
-          <div className='main__card'>
-            <h2>Yuklar soni: <span>2233</span></h2>
-            <h2>Foydalanuvchilar: <span>11002</span></h2>
-          </div>
-        </div>
-      </SwiperSlide>
-      <SwiperSlide className='swiper2'>
-        <div>
-          <h3>
-            Biz sizga yordam bera olamiz! <br />
-            Siz bizning saytimizda o'z mahsulotingizni <br />
-            Reklama qilishingiz va <br />
-            Mahsulotlarni topishingiz mumkin!
-          </h3>
-          <div className='main__card'>
-            <h2>Davlatlar soni: <span>2233</span></h2>
-            <h2>Xaydovchilar soni: <span>11002</span></h2>
-          </div>
-        </div>
+// const MySwiper = () => {
+//   const { t } = useTranslation();
 
-      </SwiperSlide>
-    </Swiper>
-    </div>
-  )
-}
+//   const SwiperData = [
+//     {
+//       text: "swiper.text",
+//       description: "swiper.description",
+//       img: Img1,
+//     }
+//   ];
 
-export default MySwiper
+//   return (
+//     <div>
+//       <Swiper
+//         id='swiper'
+//         spaceBetween={30}
+//         centeredSlides={true}
+//         autoplay={{
+//           delay: 5000,
+//           disableOnInteraction: false,
+//         }}
+//         pagination={{
+//           clickable: true,
+//         }}
+//         navigation={true}
+//         className="mySwiper"
+//       >
+//         {SwiperData.map((item, index) => (
+//           <SwiperSlide key={index} className='swiper1'>
+//             <div style={{ backgroundImage: `url(${item.img})` }} className="bg-cover bg-center h-64 w-full">
+//               <h3>
+//                 {t(item.text)} <br />
+//                 {t(item.description)} <br /> 
+//               </h3>
+//             </div>
+//           </SwiperSlide>
+//         ))}
+//       </Swiper>
+//     </div>
+//   );
+// };
+
+// export default MySwiper;

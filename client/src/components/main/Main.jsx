@@ -1,12 +1,10 @@
 import React from 'react'
-import MySwiper from '../../helpers/swiper/Swiper'
-import "./Main.css"
-function Main() {
+function MainC() {
   return (
     <div>
-      <MySwiper/>
+      {/* <MySwiper/> */}
     </div>
   )
 }
 
-export default Main
+export default MainC

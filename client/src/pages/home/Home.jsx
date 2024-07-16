@@ -1,16 +1,13 @@
 import React from 'react'
-import "./Home.css"
-import { Diagram, Footer, Main, Navbar,  Partner, Stats } from '../../components/components'
+import { Diagram, Navbar } from '../../components/components'
+import LoginUser from '../../components/footer/Footer'
 
 function Home() {
   return (
     <div className='home'>
         <Navbar/>
-        <Main/>
         <Diagram/>
-        <Stats/>
-        <Partner/>
-        <Footer/>
+        <LoginUser/>
     </div>
   )
 }

@@ -1,40 +1,49 @@
-import React from 'react'
-import "./Navbar.css"
-import { Eng, Rus, Uzb } from '../../assets/navbar/flag'
+import React, { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 
-function Navbar() {
-    return (
-        <nav>
-            <div className="logo">
-                <img src="" alt="Logo" />
-            </div>
+const Navbar = () => {
+  const { t, i18n } = useTranslation();
 
-                <div className="nav__collection">
-                    <ul className=' nav__menu'>
-                        <li><a href="#" id="">Asosiy</a></li>
-                        <li><a href="#" id="">Aloqa</a></li>
-                        <li><a href="#" id="">Tavarlar</a></li>
-                        <li><a href="#" id="">Premium</a></li>
-                        <li><a href="#" id="">Sozlamalar</a></li>
-                        <select className='select'>
-                            <option value="">
-                                <span><img src={Uzb} alt="Uzb" className='uzb' /></span>
-                                <span>Uzbekcha</span> 
-                            </option>
-                            <option value="">
-                                <span><img src={Eng} alt="Eng" className='eng' /></span>
-                                <span>English</span>
-                            </option>
-                            <option value="">
-                                <span><img src={Rus} alt="Rus" className='rus' /></span>
-                                <span>Русский</span>
-                            </option>
-                        </select>
-                        <button>Hozir bepul boshlang</button>
-                    </ul>
-                </div>
-        </nav>
-    )
-}
+  const changeLanguage = (lng) => {
+    i18n.changeLanguage(lng);
+  };
 
-export default Navbar
+  // State for menu toggle
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  // Toggle menu function
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
+  return (
+    <nav className="bg-gray-800 p-4">
+      <div className="flex items-center justify-between">
+        <div className="text-white font-bold">
+          Truck Delivery
+        </div>
+        
+        <div className="flex items-center gap-4">
+          <select
+                id="languageSelect"
+                className="bg-transparent text-white border-[2px] border-[aqua] p-2 text-sm rounded-md cursor-pointer hover:bg-[aqua] hover:text-black  font-mono font-semibold "
+                onChange={(e) => changeLanguage(e.target.value)}
+              >
+                <option value="en">
+                  English
+                </option>
+                <option value="uz">
+                O'zbekcha
+                </option>
+              </select><button
+            className="text-white border-[2px] border-[aqua] p-2 text-sm rounded-md cursor-pointer hover:bg-[aqua] hover:text-black  font-mono font-semibold"
+          >
+          {t('navbar.btn')}
+          </button>
+        </div>
+      </div>
+    </nav>
+  );
+};
+
+export default Navbar;
